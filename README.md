@@ -1,24 +1,10 @@
-# README
+# C-Rank
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Projeto criado no hackathon Ta De Pé em Itajubá, MG.
 
-Things you may want to cover:
+C-Rank é um projeto que visa criar um rank como indicador de confiabilidade de construtoras que oferecem seus serviços para a construção de escolas e creches.
 
-* Ruby version
+Em seu estado atual, este projeto precisa de um banco de dados preenchido corretamente.
+Os métodos utilizados para a importação dos arquivos CSV para o banco de dados estão em seus respectivos models. Uma funcionalidade necessária é melhorar esses métodos para aceitar outros arquivos e tratar de forma mais eficiente os dados recebidos (como remover aspas).
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+A forma que o rank é calculado deve ser constantemente aprimorada a fim de fornecer um rank de alta confiabilidade e impacto social.
