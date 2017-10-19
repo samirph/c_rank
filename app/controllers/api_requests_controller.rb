@@ -1,0 +1,2 @@
+class ApiRequestsController < ApplicationController
+end

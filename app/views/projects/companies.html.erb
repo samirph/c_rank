@@ -1,0 +1,23 @@
+<h1>Construtoras</h1>
+<table class="table table-striped">
+  <tr>
+    <th>Nome</th>
+    <th>CNPJ</th>
+    <th>Pontuação</th>
+  </tr>
+  <% @companies.each do |c| %>
+  <tr>
+    <td> <a href="/construtoras/<%= c.id %>"><%= c.name %></a> </td>
+    <td> <%= c.cnpj %> </td>
+    <td> <strong><%= c.score %></strong></td>
+  </tr>
+  <% end %>
+</table>
+
+<h4>
+  <strong>
+    <%= will_paginate @companies %>
+  </strong>
+</h4>
+
+<br><br>

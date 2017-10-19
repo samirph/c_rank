@@ -1,0 +1,2 @@
+class CompanyRankController < ApplicationController
+end

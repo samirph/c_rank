@@ -1,0 +1,43 @@
+<div class="heading text-center">
+  <h1><%= @company.name %></h1>
+  <a href="/construtoras" class="btn btn-primary btn-lg" style="float: left;">Voltar</a>
+  <input type="hidden" name="company_id" value="<%= params[:id] %>">
+  <div class="row text-center pagination-centered">
+    <div class="col-md-6 col-centered">
+        <canvas id="company_chart" width="50" height="350"></canvas>
+    </div>
+  </div>
+</div>
+
+<h2>Projetos</h2>
+<table class="table table-striped">
+  <tr>
+    <th>Nome</th>
+    <th>Status</th>
+    <th>Localização</th>
+  </tr>
+  <% @company.projects.each do |project| %>
+  <tr>
+    <td> <%= project.name %> </td>
+    <td> <%= project.status %></td>
+    <td> <%= "#{project.address}, #{project.city} - #{project.state}" %> </td>
+  </tr>
+  <% end %>
+</table>
+<h2></h2>
+
+<% if @inspections.present? %>
+<h2>Esta construtora recebeu os seguintes alertas:</h2>
+<table class="table table-striped">
+  <tr>
+    <th>Nome do Projeto</th>
+    <th>Status do alerta</th>
+  </tr>
+  <% @inspections.each do |i| %>
+  <tr>
+    <td> <%= @projects.find{|pr| pr.simec_id == i.project_id}.name %> </td>
+    <td><button type="button" class="btn btn-primary"><%= i.status %></button></td>
+  </tr>
+  <% end %>
+</table>
+<% end %>

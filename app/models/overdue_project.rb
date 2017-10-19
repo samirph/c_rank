@@ -1,0 +1,2 @@
+class OverdueProject < ApplicationRecord
+end
